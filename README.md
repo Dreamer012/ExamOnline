@@ -45,4 +45,4 @@ web框架：MVC
 根据老师的给出的需求,我们决定将系统分为4个功能,分别为知识点管理、知识点关系呈现、生成试卷和知识点判断。
 用户可以根据需求选择相应功能，这些功能前提都是登陆系统，具体如下图所示：
 
-![image](http://oxe83orr5.bkt.clouddn.com/123.png)
+![image](http://ww3.sinaimg.cn/large/0060lm7Tly1fk8mtng1fgj30ig0hkta2.jpg)
