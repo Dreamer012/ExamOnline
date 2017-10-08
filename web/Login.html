@@ -1,0 +1,134 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <base href="<%=basePath%>">
+
+    <title>
+        在线考试系统
+    </title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><style type="text/css">
+    <!--
+    body {
+        background-image: url(Img/back.jpg);
+    }
+    .style1 {font-size: 13px}
+    -->
+</style>
+<script language="javascript">
+function yanzheng(){
+        var id = jQuery("#textfield").val();
+		if(id == '') {
+			msg("用户名必填");
+			return false;
+		}
+
+		console.log(111)
+		
+		var pwd = jQuery("#textfield2").val();
+		if(pwd == ''){
+			msg("密码必填");
+			return false;
+		}
+jQuery.post("/PerManagerSys/LoginServlet",
+			{"login_id":id,"login_pwd":pwd},
+			function(login){
+				if(login == 'f'){
+					msg("登录名或密码错误");
+				}else if(login == 's'){
+					location.href="html/system/main.html";
+				}
+			});
+}
+</script>
+
+</head>
+
+<body>
+<form name="form1" method="post" action="LoginServlet"  id="form1">
+    <div>
+        <table width="800" align="center" >
+            <tr>
+                <td bgcolor="#6A5ACD" align="center"><font color="#40E0D0" size="5" face="arial" width="481" height="73" align="center">在线考试系统</font></td>
+            </tr>
+        </table>
+
+        <table width="800" height="450" align="center" >
+            <tr>
+                <td bgcolor="#CCCCCC"><table width="100%" bgcolor="#FFFFFF" >
+                    <tr>
+                        <td width="60%" height="450" background="Img/login.jpg">&nbsp; &nbsp; &nbsp;
+                            
+                            <form name="form1" onSubmit="return yanzheng();" action="" method="post">
+                     
+	                            <table width="100%" >
+	                                <tr>
+	                                    <td style="width: 298px">&nbsp;</td>
+	                                    <td width="452" >&nbsp;</td>
+	                                </tr>
+	                                <tr>
+	                                    <td style="width: 298px">&nbsp;</td>
+	                                    <td>&nbsp;</td>
+	                                </tr>
+	                                <tr>
+	                                    <td style="width: 298px">&nbsp;</td>
+	                                    <td>&nbsp;</td>
+	                                </tr>
+	                                <tr>
+	                                    <td style="width: 298px"><div align="right"></div></td>
+	                                    <td>&nbsp;</td>
+	                                </tr>
+	                                <tr>
+	                                    <td style="width: 298px"><div align="right" class="style1">
+	                                        <span id="Label2" style="display:inline-block;width:48px;">帐号</span>&nbsp;</div></td>
+	                                    <td>&nbsp;<input name="login_id" type="text" id="login_id" style="width:118px;" onfocus="if (value ==&#39;Your id&#39;){value =&#39;&#39;}" onblur="if (value ==&#39;&#39;){value=&#39;Your id&#39;}" value="Your id" />
+	                                        </td>
+	                                </tr>
+	                                <tr>
+	                                    <td style="width: 298px"><div align="right">
+	                                        &nbsp;</div></td>
+	                                    <td>&nbsp;</td>
+	                                </tr>
+	                                <tr>
+	                                    <td style="width: 298px"><div align="right" class="style1">
+	                                        <span id="Label3" style="display:inline-block;width:46px;">密码</span>&nbsp;</div></td>
+	                                    <td>&nbsp;<input name="login_pwd" type="password" id="login_pwd" style="width:118px;" onfocus="if (value ==&#39;******&#39;){value =&#39;&#39;}" onblur="if (value ==&#39;&#39;){value=&#39;******&#39;}" value="******" />
+	                                        </td>
+	                                </tr>
+	                                <tr>
+	                                    <td style="width: 298px">&nbsp;</td>
+	                                    <td>&nbsp;</td>
+	                                </tr>
+	                                <tr>
+	                                    <td style="width: 298px">&nbsp;</td>
+	                                    <td>&nbsp;<input type="submit" name="Button1" value="登录"  id="Button1" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="Button2" value="重置" onclick="" id="Button2" /></td>
+	                                </tr>
+	                                <tr>
+	                                    <td style="width: 298px">&nbsp;</td>
+	                                    <td>&nbsp;</td>
+	                                </tr>
+	                                <tr>
+	                                    <td style="width: 298px">&nbsp;</td>
+	                                    <td>&nbsp;</td>
+	                                </tr>
+	                                <tr>
+	                                    <td style="width: 298px">&nbsp;</td>
+	                                    <td>&nbsp;</td>
+	                                </tr>
+	                            </table>
+	                        </form>
+	                        </td>
+                    </tr>
+                </table></td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <div>
+
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBALrgPYIAuzRsusGAuzR9tkMAoznisYGh7vHkGfT0WPt77ftwpSTeDATCqQ=" />
+    </div>
+
+
+</form>
+</body>
+</html>
