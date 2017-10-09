@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.eoi.biz.LoginBiz;
+import com.eoi.util.ResponseUtil;
 
 /**
  * 管理员登录
@@ -41,6 +42,7 @@ public class LoginServlet extends HttpServlet {
      * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int status;
         Map<String, String[]> map = request.getParameterMap();
 
         HashMap<String, String> result = new LoginBiz().checklogin(map);
@@ -48,9 +50,19 @@ public class LoginServlet extends HttpServlet {
         if(result != null){
             HttpSession session = request.getSession();
             session.setAttribute("login_info", result);
-            response.getWriter().append("s");
+            try {
+                ResponseUtil.write("{'status':1,'msg':'登陆成功'}",response);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         }else {
-            response.getWriter().append("f");
+            try {
+                ResponseUtil.write("{'status':0,'msg':'用户名或密码错误'}",response);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
