@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID" version="2.5">
+    <display-name>ExamSystem</display-name>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- 配置初始化参数 -->
+    <context-param>
+        <param-name>pageHeaderLib</param-name>
+        <param-value>/jsp/common/lib/header_lib.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pageHeader</param-name>
+        <param-value>/jsp/common/header.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pageNav</param-name>
+        <param-value>/jsp/customer/nav.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>mainPage</param-name>
+        <param-value>/jsp/common/default.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pageFooter</param-name>
+        <param-value>/jsp/common/footer.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pageFooterLib</param-name>
+        <param-value>/jsp/common/lib/foot_lib.jsp</param-value>
+    </context-param>
+
+    <!-- 配置登录过滤器 -->
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>cn.bestick.examsys.common.filter.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- 配置struts2默认过滤器 -->
+    <filter>
+        <filter-name>StrutsPrepareAndExecuteFilter</filter-name>
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>StrutsPrepareAndExecuteFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>

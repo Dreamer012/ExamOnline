@@ -1,0 +1,198 @@
+/**
+ *  Created by IntelliJ IDEA.
+ *  User: Bestick
+ *  Date: 2016/4/6
+ *  Time: 17:34
+ *  Url: http://www.bestick.cn
+ *  Copyright © 2015-2016 All rights reserved
+ *  -----------------------------------------------------------
+ *  会当凌绝顶，一览众山小。
+ */
+
+/*清除默认样式*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Microsoft Yahei", Helvetica, Arial, sans-serif;
+}
+
+tr, th {
+    text-align: center;
+}
+
+input {
+    outline: none;
+}
+
+.login-box {
+    position: relative;
+    background: url("/resources/image/login.jpg") no-repeat scroll center center/1004px 584px;
+    margin: 20px auto;
+    width: 1004px;
+    height: 584px;
+}
+
+.login-box .form-box {
+    position: absolute;
+    height: 137px;
+    width: 358px;
+    top: 201px;
+    right: 149px;
+}
+
+.form-box p {
+    padding: 4px 16px;
+}
+
+#body {
+    width: 1000px;
+    margin: auto;
+}
+
+.header {
+    background: url("/resources/image/banner.jpg") no-repeat center center/1000px 90px;
+    margin: auto;
+    width: 1000px;
+    height: 90px;
+    position: relative;
+}
+
+.header span {
+    position: absolute;
+    bottom: 8px;
+    right: 32px;
+    color: red;
+}
+
+.navbar-brand {
+    padding: 7px 15px;
+}
+
+.navbar-brand img {
+    width: 36px;
+    height: 36px;
+}
+
+.default {
+    color: red;
+    font-size: 48px;
+    text-align: center;
+    padding: 200px 0;
+}
+
+.footer {
+    text-align: center;
+    font-size: 16px;
+    padding: 18px 0;
+}
+
+.selectPaper {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.selectPaper select {
+    outline: none;
+}
+
+.selectPaper-ctrl {
+    padding: 28px 0;
+}
+
+.question-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 36px 0 18px;
+}
+
+.detail-paper {
+    padding: 16px;
+}
+
+.question-box {
+    padding: 0 12px;
+}
+
+.detail-paper label {
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+.detail-paper label input {
+    position: relative !important;
+    margin-left: 0 !important;
+}
+
+.detail-paper .time-info {
+    font-size: 16px;
+    padding: 16px 0 8px;
+}
+
+.detail-paper .time-info strong {
+    padding: 0 6px;
+}
+
+.detail-paper .time-info span:nth-of-type(3) strong {
+    color: red;
+}
+
+.detail-paper .time-info span {
+    display: inline-block;
+    text-align: center;
+    width: 32%;
+}
+
+.detail-paper .exam-info .title {
+    text-align: center;
+    font-size: 28px;
+}
+
+.detail-paper .exam-info .desc {
+    text-align: right;
+    font-size: 16px;
+}
+
+.examResult {
+    text-align: center;
+    padding: 80px 0;
+    font-size: 21px;
+}
+
+.examResult strong {
+    color: red;
+}
+
+.myExam .table-title {
+    text-align: center;
+    font-size: 20px;
+    padding: 18px 0;
+    margin: 0;
+}
+
+.myExam table {
+    font-size: 16px;
+}
+
+.update-password {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.update-password .title {
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.update-password form #username {
+    background: #e8e8e7;
+}
+
+.update-pwd-success {
+    font-size: 28px;
+    color: red;
+    text-align: center;
+    padding: 60px;
+}
